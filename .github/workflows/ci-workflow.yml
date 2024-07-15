@@ -2,11 +2,18 @@ name: CI for building LLVM
 on: [push, pull_request]
 
 jobs:
-  dummy:
-    name: dummy
-    runs-on: ubuntu-latest
+  darwin-arm64:
+    name: darwin-arm64
+    runs-on: macOS-latest
     steps:
-      - run: echo "Hello, world!"
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+      - run: sh build-release.sh
+      - uses: actions/upload-artifact@master
+        with:
+          name: llvm-15.0.0-darwin-arm64
+          path: llvm-15.0.0-darwin-arm64.tar.gz
   # darwin-x86_64:
   #   name: darwin-x86_64
   #   runs-on: macOS-latest
