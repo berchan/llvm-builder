@@ -13,7 +13,7 @@ jobs:
       - uses: actions/upload-artifact@master
         with:
           name: llvm-15.0.0-darwin-arm64
-          path: llvm-15.0.0-darwin-arm64.tar.gz
+          path: llvm-15.0.0-darwin-arm64.tar.xz
   # darwin-x86_64:
   #   name: darwin-x86_64
   #   runs-on: macOS-latest
