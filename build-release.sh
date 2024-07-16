@@ -7,6 +7,6 @@ CC=clang CXX=clang++ cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../
 make -j4
 make install
 cd ..
-tar cJf llvm-release.tar.xz llvm-release/
+tar cJf llvm-15.0.0-arm64-apple-darwin.tar.xz llvm-release/
 
 # llvm-15.0.0-arm64-apple-darwin.tar.xz
